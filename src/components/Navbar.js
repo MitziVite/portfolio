@@ -1,39 +1,121 @@
 import { Component } from 'react';
 import mitziImage from '../../src/images/Mitzi.png';
-import "./NavbarStyles.css"
+import "./NavbarStyles.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+class Navbar extends Component {
+    state = {
+        clicked: false,
+        activeSection: "home", // Estado para la sección activa
+    };
 
-class Navbar extends Component{
-    state = {clicked: false};
     handleClick = () => {
-        this.setState({clicked: !this.state.clicked})
+        this.setState({ clicked: !this.state.clicked });
+    };
+
+    handleScroll = () => {
+        const sections = document.querySelectorAll("section");
+        let activeSection = "home"; // Por defecto, si estamos al inicio, se selecciona "home"
+        const offset = 700; // Ajusta esta distancia para que se active cuando estés más cerca de la parte superior
+    
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 80; // Ajusta según la altura del navbar
+            const sectionHeight = section.clientHeight;
+    
+            // Activar la sección solo cuando la parte superior de la sección está cerca del viewport
+            if (
+                window.scrollY + offset >= sectionTop && // +offset para ajustarlo un poco más arriba
+                window.scrollY < sectionTop + sectionHeight
+            ) {
+                activeSection = section.getAttribute("id");
+            }
+        });
+    
+        // Si el scroll está en la parte superior, asegúrate de que "home" sea activa
+        if (window.scrollY === 0) {
+            activeSection = "home";
+        }
+    
+        this.setState({ activeSection });
+    };
+    
+    
+
+    componentDidMount() {
+        window.addEventListener("scroll", this.handleScroll);
     }
-    render(){
-    return(
-        <>
-        <nav>
-            <a href="index.html">
-                <img src={mitziImage} alt='Mitzi'></img>
-            </a>
-            <div>
-                <ul id="navbar" className={this.state.clicked ? "#navbar active" : "#navbar"}>
-                    <li><a className="active" href="index.html">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="index.html">Portfolio</a></li>
-                    <li><a href="index.html">Contact</a></li>
-                </ul>
-            </div>
 
-            <div id='mobile' onClick={this.handleClick}>
-                <i id="bar" className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}></i>
-            </div>
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.handleScroll);
+    }
 
+    render() {
+        return (
+            <>
+                <nav>
+                    <a href="#home">
+                        <img src={mitziImage} alt="Mitzi"></img>
+                    </a>
+                    <div>
+                    <ul
+                        id="navbar"
+                            className={this.state.clicked ? "#navbar active" : "#navbar"}
+                    >
 
-        </nav>
-        </>
-    )
-}
+                            <li>
+                                <a
+                                    className={this.state.activeSection === "home" ? "active" : ""}
+                                    href="#home"
+                                >
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className={this.state.activeSection === "about" ? "active" : ""}
+                                    href="#about"
+                                >
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className={this.state.activeSection === "portfolio" ? "active" : ""}
+                                    href="#portfolio"
+                                >
+                                    Portfolio
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    className={this.state.activeSection === "contact" ? "active" : ""}
+                                    href="#contact"
+                                >
+                                    Contact
+                                </a>
+                            </li>
+                            <li className="resume">
+                            <a 
+                                href="https://www.dropbox.com/scl/fi/9o5lfbq80feiq7uve4xsm/Mitzi-VIte-Resumes.pdf?rlkey=kk8qeqwxp155b3rq3dtxauh1j&st=e588ih0p&dl=0" 
+                                download="Resume">
+                                Download Resume
+                                <i className="fas fa-download"></i>
+                            </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div id="mobile" onClick={this.handleClick}>
+                        <i
+                            id="bar"
+                            className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
+                        ></i>
+                    </div>
+                </nav>
+            </>
+        );
+    }
 }
 
 export default Navbar;

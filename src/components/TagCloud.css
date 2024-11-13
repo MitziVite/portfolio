@@ -1,6 +1,4 @@
-             
-/* Importing google font  */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap');
 
 .text-shpere {
     position: relative;
@@ -10,20 +8,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: #1e1e1e; */
 }
 
 .tagcloud {
     display: inline-block;
     top: 0;
     left: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     letter-spacing: 0.0625em;
     font-size: 1.3em;
+    padding: 0;
+    text-align: center;
 }
 
-/* Change color of each text in sphere on hover   */
 .tagcloud--item {
     color: #00ffffff;
     text-transform: uppercase;
@@ -32,4 +30,16 @@
 .tagcloud--item:hover {
     color: #ff8591;
 }
-            
+
+@media (max-width: 768px) {
+    .tagcloud--item {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+    .tagcloud {
+        font-size: 1em;
+        padding: 0;
+        width: 80%;
+        margin-left: -50px;
+    }
+}
