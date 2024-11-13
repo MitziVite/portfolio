@@ -1,38 +1,50 @@
-import React from "react";
-import TagCloud from "react-tag-cloud";
-import "@fortawesome/fontawesome-free/css/all.min.css";
-
+          
+import React, { useEffect } from "react";
+import "./TagCloud.css";
+import TagCloud from "TagCloud";
 
 const TagCloudComponent = () => {
-    const data = [
-      { text: "React", value: 40 },
-      { text: "JavaScript", value: 30 },
-      { text: "CSS", value: 25 },
-      { text: "HTML", value: 20 },
-      { text: "Node.js", value: 35 },
-      { text: "Git", value: 15 },
-      { text: "Redux", value: 10 },
-      { text: "TypeScript", value: 30 },
-    ];
-    return (
-        <div style={{ width: "100%", height: "400px", margin: "auto" }}>
-          <TagCloud
-            style={{
-              fontFamily: "sans-serif",
-              fontSize: 30,
-              color: () => `#${Math.floor(Math.random() * 16777215).toString(16)}`,
-              padding: 5,
-            }}
-          >
-            {data.map((tag, index) => (
-              <div key={index} style={{ fontSize: `${tag.value}px` }}>
-                {tag.text}
-              </div>
-            ))}
-          </TagCloud>
-        </div>
-      );
+  // Animation settings for Text Cloud
+  useEffect(() => {
+    return () => {
+      const container = ".tagcloud";
+      const texts = [
+        "HTML",
+        "CSS",
+        "SASS",
+        "JavaScript",
+        "React",
+        "NodeJS",
+        "Jquery",
+        "Git",
+        "GitHub",
+        "PostgreSQL",
+        "Python",
+        "MongoDB",
+        "C#",
+        "PowerApps",
+
+
+      ];
+
+      const options = {
+        radius: 300,
+        maxSpeed: "normal",
+        initSpeed: "normal",
+        keep: true,
+      };
+
+      TagCloud(container, texts, options);
+    };
+  }, []);
+
+  return (
+    <>
+      <div className="text-shpere">
+        <span className="tagcloud"></span>
+      </div>
+    </>
+  );
 };
 
 export default TagCloudComponent;
-
