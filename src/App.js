@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import ParticlesComponent from './components/particles';
+import TagCloudComponent from './components/TagCloud';
+import Presentation from './components/Presentation';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Navbar />
+      <ParticlesComponent/>
+
+      
+      <div className="content">
+        <div className="centered-text">
+          <h1>
+            Hello. I am <span className="highlighted-name">Mitzi Vite</span>,
+          </h1>
+          <p>I am a Full-Stack Web Developer</p>
+        </div>
+        <div className="presentation-container">
+          <Presentation />
+          <TagCloudComponent />
+        </div>
+      </div>
     </div>
   );
 }

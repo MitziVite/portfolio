@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+nav {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    background: #23233360;
+    padding: 0% 7%; 
+    font-family: 'Playfair Display', serif;
+    z-index: 10;
+  }
+  
+  #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  #navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  #navbar li a {
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+    position: relative;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  #navbar li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff8591;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  #navbar li a:hover::after,
+  #navbar li a.active::after {
+    width: 100%;
+  }
+  
+  #navbar li a:hover,
+  #navbar li a.active {
+    color: #ff8591;
+  }
+  
+#mobile{
+display:none;
+}
+
+ #mobile i{
+   color: #fff;
+
+}
+
+@media screen and (max-width:760px){
+  #navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 90px;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: #2a3339;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 40px 0 0 10px;
+  }
+
+  #navbar.active{
+    right: 0px;
+  }
+  #navbar li{
+    margin-bottom: 25px;
+  }
+
+  #mobile{
+    display: block;
+  }
+  #mobile i{
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
