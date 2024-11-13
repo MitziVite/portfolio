@@ -4,6 +4,7 @@ import ParticlesComponent from './components/particles';
 import TagCloudComponent from './components/TagCloud';
 import Presentation from './components/Presentation';
 import ProjectsGallery from "./components/Gallery";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
       </div>
       <div className='gallery-grid'>
       <ProjectsGallery />
+      </div>
+      <div className="contact-container">
+      <Contact />
       </div>
     </div>
   );

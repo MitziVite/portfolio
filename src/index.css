@@ -68,6 +68,10 @@
   padding-left: 20px;
 }
 
+.contact-container{
+  position: relative;
+  z-index: 2;
+}
 
 
 
