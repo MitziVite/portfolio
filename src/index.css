@@ -79,7 +79,6 @@
   position: relative;
   z-index: 2;
 }
-
 /* Responsive Layout for Small Screens */
 @media screen and (max-width: 760px) {
   .presentation-container {
@@ -87,20 +86,19 @@
   }
 
   .presentation-right {
-    display: hidden;
+    display: none; /* Cambié "hidden" por "none" */
   }
+  
   .centered-text {
     margin: 20px;
   }
-  
+
   .centered-text p {
     font-size: 1.3rem;
-
   }
-  .presentation-left{
+
+  .presentation-left {
     max-height: 60vh;
   }
-  .presentation-right{
-    max-height: 50vh;
-  }
+
 }
