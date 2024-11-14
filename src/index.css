@@ -87,7 +87,7 @@
   }
 
   .presentation-right {
-    margin: 100px;
+    display: hidden;
   }
   .centered-text {
     margin: 20px;
