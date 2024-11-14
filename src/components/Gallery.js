@@ -8,6 +8,7 @@ import CSEMotors from "../images/CSE Motors.png";
 import Weather from "../images/Weather.png";
 import MexicoCityMap from "../images/MexicoCityMap.png";
 import Inspiro from "../images/Inspiro.png";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ProjectsGallery = () => {
   return (
@@ -16,7 +17,7 @@ const ProjectsGallery = () => {
       <div className="projects-container">
         <div className="project-card">
           <a href="https://github.com/MitziVite/Hackathon-fall-2024" target="_blank" rel="noopener noreferrer">
-            <img src={Rexy} alt="Project 2" />
+          <LazyLoadImage src={Rexy} alt="Rexy's Voice Proyect" width={'100%'} effect="blur"/>
           </a>
           <h3>Rexy's Voice</h3>
           <p>
@@ -25,7 +26,7 @@ const ProjectsGallery = () => {
         </div>
         <div className="project-card">
           <a href="https://github.com/narah10/Inspiro-Project" target="_blank" rel="noopener noreferrer">
-            <img src={Inspiro} alt="Project 2" />
+          <LazyLoadImage src={Inspiro} alt="Inspiro Proyect" width={'100%'} effect="blur"/>
           </a>
           <h3>Inspiro</h3>
           <p>
@@ -34,7 +35,7 @@ const ProjectsGallery = () => {
         </div>
         <div className="project-card">
           <a href="https://github.com/MitziVite/VideoAndVisualCatalog" target="_blank" rel="noopener noreferrer">
-            <img src={videoCatalog} alt="Project 2" />
+            <LazyLoadImage src={videoCatalog} alt="Video Catalog Proyect" width={'100%'} effect="blur"/>
           </a>
           <h3>Video and Visual Catalog</h3>
           <p>
@@ -43,7 +44,7 @@ const ProjectsGallery = () => {
         </div>
         <div className="project-card">
           <a href="https://github.com/MitziVite/Store" target="_blank" rel="noopener noreferrer">
-            <img src={Store} alt="Project 2" />
+            <LazyLoadImage src={Store} alt="Store Proyect" width={'100%'} effect="blur"/>
           </a>
           <h3>SIT Store</h3>
           <p>
@@ -52,7 +53,8 @@ const ProjectsGallery = () => {
         </div>
         <div className="project-card">
           <a href="https://github.com/MitziVite/wdd230" target="_blank" rel="noopener noreferrer">
-            <img src={Bountiful} alt="Project 2" />
+          
+            <LazyLoadImage src={Bountiful} alt="Bountiful Proyect" width={'100%'} effect="blur"/>
           </a>
           <h3>Bountiful Food</h3>
           <p>
@@ -61,7 +63,7 @@ const ProjectsGallery = () => {
         </div>
         <div className="project-card">
           <a href="https://github.com/MitziVite/cse340-vite" target="_blank" rel="noopener noreferrer">
-            <img src={CSEMotors} alt="Project 2" />
+            <LazyLoadImage src={CSEMotors} alt="CSE Motors Proyect" width={'100%'} effect="blur"/>
           </a>
           <h3>CSE Motors</h3>
           <p>
@@ -70,7 +72,7 @@ const ProjectsGallery = () => {
         </div>
         <div className="project-card">
           <a href="https://github.com/MitziVite/Weather-App-Project2" target="_blank" rel="noopener noreferrer">
-            <img src={Weather} alt="Project 2" />
+            <LazyLoadImage src={Weather} alt="Weather Proyect" width={'100%'} effect="blur"/> 
           </a>
           <h3>Weather App</h3>
           <p>
@@ -79,7 +81,7 @@ const ProjectsGallery = () => {
         </div>
         <div className="project-card">
           <a href="https://github.com/MitziVite/historical_parks_mexicocity" target="_blank" rel="noopener noreferrer">
-            <img src={MexicoCityMap} alt="Project 2" />
+          <LazyLoadImage src={MexicoCityMap} alt="Mexico City Map Proyect" width={'100%'} effect="blur"/>
           </a>
           <h3>Historical Places and Parks in Mexico City</h3>
           <p>
