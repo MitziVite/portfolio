@@ -46,7 +46,7 @@ const Sidenav = () => {
       className={isMobile ? "mobile" : ""}
     >
       <a
-        href="https://www.linkedin.com/in/tu-perfil"
+        href="https://www.linkedin.com/in/mitzi-vite/"
         target="_blank"
         rel="noopener noreferrer"
         className={contactVisible ? "active" : ""}
