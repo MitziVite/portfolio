@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Overview
+As a software engineer, my goal is to continue developing my skills in full-stack web development, especially in building dynamic and interactive web applications. This project is part of my learning process, allowing me to apply modern web technologies like React and APIs, improving my ability to build functional and visually appealing applications.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The web app I built is an interactive portfolio designed to showcase the projects and technologies I have worked with. The design focuses on a clean, attractive interface that highlights key projects and provides an overview of my skills as a developer. The app allows users to explore different sections, such as my personal introduction, project gallery, and contact information.
 
-## Available Scripts
+To run the app locally:
 
-In the project directory, you can run:
+1. Install dependencies:
 
-### `npm start`
+    npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Start the server:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    npm start
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Visit http://localhost:3000/ in your browser.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The purpose of this app is to create a professional portfolio that highlights my work and demonstrates my proficiency with React and web development best practices.
+[Software Demo Video](http://youtube.link.goes.here)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Web Pages
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The web app consists of several pages, each serving a different purpose:
 
-### `npm run eject`
+Home Page: The first page users see when they visit the website. It introduces who I am and what I do, with dynamic animations and an interactive layout.
+About Page: This page provides more detailed information about my background, skills, and experience. 
+Portfolio Page: Displays my projects in a gallery format, dynamically pulling project data from a JSON file or API and rendering it as individual cards. Each project card is clickable and leads to the Github repository of the project.
+Contact Page: A contact form that allows users to reach out. The form dynamically handles user input, validation, and submission.
+The app transitions between pages using smooth scroll effects, and I use React Router for navigation.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Development Environment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To develop the web app, I used the following tools:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Text Editor: Visual Studio Code for writing the code.
+Package Manager: npm to manage dependencies.
+Version Control: Git for version control and GitHub for repository hosting.
+Deployment: Vercel for deploying the app.
+The app was developed using JavaScript (React) as the primary programming language. Libraries and tools include:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+React: For building the app's components.
+React Router: For handling page transitions and navigation.
+CSS (SCSS): For styling the app.
+React-icons: For adding vector icons to the interface.
 
-## Learn More
+# Useful Websites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+{Make a list of websites that you found helpful in this project}
+* [React Documentation](https://react.dev/)
+* [Particles.js](https://particles.js.org/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Future Work
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Improve about section with a table and a percentage of my ability in each technology
+* Add a blog or news section to showcase updates and new projects.
+* Improve the responsiveness of the layout for mobile devices.
