@@ -102,19 +102,18 @@ const ParticlesComponent = (props) => {
   );
 
 
-//   return <Particles id={props.id} init={particlesLoaded} options={options} />; 
 return (
     <Particles
       id={props.id}
       init={particlesLoaded}
       options={options}
       style={{
-        position: "absolute", // Asegúrate de que ocupe todo el espacio
+        position: "absolute",
         top: 0,
         left: 0,
         width: "100%",
         height: "100%",
-        zIndex: 1, // Mantener en el fondo
+        zIndex: 1,
       }}
     />
   );

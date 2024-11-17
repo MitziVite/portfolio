@@ -18,7 +18,7 @@ Visit http://localhost:3000/ in your browser.
 
 
 The purpose of this app is to create a professional portfolio that highlights my work and demonstrates my proficiency with React and web development best practices.
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://www.loom.com/share/c3e776e431a44cb8bc8aa77536c4e4f5?sid=81f15c96-ae84-4626-9d49-6b373dc7e877) 
 
 # Web Pages
 
